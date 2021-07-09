@@ -63,7 +63,7 @@ class QBTask(Status):
         return self._omess.sender_id
 
     async def create_message(self):
-        msg = "<b>Downloading:</b> <code>{}</code>\n".format(
+        msg = "<b>📥 Downloading:</b> <code>{}</code>\n".format(
             self._torrent.name
             )
         msg += "<b>Down:</b> {} <b>Up:</b> {}\n".format(
@@ -219,28 +219,28 @@ class ARTask(Status):
         except:
             pass
 
-        msg = "<b>Downloading:</b> <code>{}</code>\n".format(
+        msg = "<b>📥 Downloading:</b> <code>{}</code>\n".format(
             downloading_dir_name
             )
-        msg += "<b>Down:</b> {} <b>Up:</b> {}\n".format(
+        msg += "<b>⏬ Down:</b> {} <b>⏫ Up:</b> {}\n".format(
             self._dl_file.download_speed_string(),
             self._dl_file.upload_speed_string()
             )
-        msg += "<b>Progress:</b> {} - {}%\n".format(
+        msg += "<b>🔃 Progress:</b> {} - {}%\n".format(
             self.progress_bar(self._dl_file.progress/100),
             round(self._dl_file.progress,2)
             )
-        msg += "<b>Downloaded:</b> {} of {}\n".format(
+        msg += "<b>📥 Downloaded:</b> {} of {}\n".format(
             human_readable_bytes(self._dl_file.completed_length),
             human_readable_bytes(self._dl_file.total_length)
             )
-        msg += "<b>ETA:</b> <b>{} Mins</b>\n".format(
+        msg += "<b>⌛ ETA:</b> <b>{} Mins</b>\n".format(
             self._dl_file.eta_string()
             )
-        msg += "<b>Conns:</b>{} <b>\n".format(
+        msg += "<b>🔗 Conns:</b>{} <b>\n".format(
             self._dl_file.connections
             )
-        msg += "<b>Using engine:</b> <code>Aria2 For DirectLinks</code>"
+        msg += "<b>🚂 Using engine:</b> <code>Aria2 For DirectLinks</code>"
 
         return msg
 
@@ -360,23 +360,23 @@ class MegaDl(Status):
         # Getting the vars pre handed
         
 
-        msg = "<b>Downloading:</b> <code>{}</code>\n".format(
+        msg = "<b>📥 Downloading:</b> <code>{}</code>\n".format(
             self._dl_info["name"]
             )
-        msg += "<b>Speed:</b> {}\n".format(
+        msg += "<b>🚀 Speed:</b> {}\n".format(
             human_readable_bytes(self._dl_info["speed"])
             )
-        msg += "<b>Progress:</b> {} - {}%\n".format(
+        msg += "<b>🔄 Progress:</b> {} - {}%\n".format(
             self.progress_bar((self._dl_info["completed_length"]/self._dl_info["total_length"])),
             round((self._dl_info["completed_length"]/self._dl_info["total_length"])*100, 2)
             )
-        msg += "<b>Downloaded:</b> {} of {}\n".format(
+        msg += "<b>🔽 Downloaded:</b> {} of {}\n".format(
             human_readable_bytes(self._dl_info["completed_length"]),
             human_readable_bytes(self._dl_info["total_length"])
             )
-        msg += "<b>ETA:</b> <b>N/A</b>\n"
+        msg += "<b>⌛ ETA:</b> <b>N/A</b>\n"
         
-        msg += "<b>Using engine:</b> <code>Mega DL</code>"
+        msg += "<b>🚂 Using engine:</b> <code>Mega DL</code>"
 
         return msg
 
