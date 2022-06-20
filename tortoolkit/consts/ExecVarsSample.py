@@ -6,20 +6,20 @@ except:
         # Set true if its VPS
         IS_VPS = False
         
-        API_HASH = ""
-        API_ID = 0
-        BOT_TOKEN = ""
-        BASE_URL_OF_BOT = ""
+        API_HASH = "df50a2b1d93e18441632fb9de4b87ac1"
+        API_ID = 17601644
+        BOT_TOKEN = "5569410591:AAGbk7usUgczRsUiUa1APLGhV1aM8WmpyAg"
+        BASE_URL_OF_BOT = "https://darklordtortoolkitx.herokuapp.com"
 
         # Edit the server port if you want to keep it default though.
         SERVPORT = 80
 
         # ALLOWED USERS [ids of user or supergroup] seperate by commas
-        ALD_USR = []
-        OWNER_ID = 0
+        ALD_USR = [-1001724765128]
+        OWNER_ID = 5249338053
         
         # Google Drive Index Link should include the base dir also See readme for more info
-        GD_INDEX_URL = False
+        GD_INDEX_URL = True
 
         # Time to wait before edit message
         EDIT_SLEEP_SECS = 10
@@ -31,20 +31,20 @@ except:
         FORCE_DOCUMENTS = False
 
         # Chracter to use as a completed progress 
-        COMPLETED_STR = "▰"
+        COMPLETED_STR = "●"
 
         # Chracter to use as a incomplete progress
-        REMAINING_STR = "▱"
+        REMAINING_STR = "○"
 
         # DB URI for access
-        DATABASE_URL = "dbname=tortk user=postgres password=your-pass host=127.0.0.1 port=5432"
+        DATABASE_URL = "postgres://kwepyazjkbtpjt:c4c36302f920935c6ed8c56efd12a6d57b3d48a7e7325c12703beb77c9ae2e62@ec2-52-73-184-24.compute-1.amazonaws.com:5432/da6sbfevubs91n"
         
         # UNCOMMENT THE BELOW LINE WHEN USING CONTAINER AND COMMENT THE UPPER LINE
         #DATABASE_URL = "dbname=tortk user=postgres password=your-pass host=db port=5432"
         
         # MEGA CONFIG
-        MEGA_ENABLE = False
-        MEGA_API = ""
+        MEGA_ENABLE = True
+        MEGA_API = "WnJiBDoB"
         MEGA_UNAME = None
         MEGA_PASS = None
 
